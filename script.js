@@ -58,22 +58,33 @@ const PROJECTS = [
   }
 ];
 
-// ====== NAV TOGGLE ======
+// ===== Mobile Drawer Navigation =====
 const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
+const drawer = document.getElementById("mobileDrawer");
+const drawerClose = document.getElementById("drawerClose");
+const overlay = document.getElementById("drawerOverlay");
 
-navToggle?.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+function openDrawer() {
+  drawer.classList.add("open");
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeDrawer() {
+  drawer.classList.remove("open");
+  overlay.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+navToggle.addEventListener("click", openDrawer);
+drawerClose.addEventListener("click", closeDrawer);
+overlay.addEventListener("click", closeDrawer);
+
+// Close drawer when clicking a link
+drawer.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", closeDrawer);
 });
 
-// Close menu when clicking a link (mobile)
-navLinks?.addEventListener("click", (e) => {
-  if (e.target.tagName === "A") {
-    navLinks.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
-  }
-});
 
 // ====== HERO BUTTONS / CONTACT LINKS ======
 document.getElementById("cvBtn").setAttribute("href", LINKS.cv);
@@ -163,6 +174,34 @@ animateCount(statProjects, PROJECTS.length);
 animateCount(statTech, 8);   // adjust if you want
 animateCount(statFocus, 4);  // adjust if you want
 
+// ====== Certificates section ======
+// ===== CERTIFICATE MODAL =====
+const modal = document.getElementById("certModal");
+const modalImg = document.getElementById("modalImg");
+const closeModal = document.getElementById("closeModal");
+
+document.querySelectorAll(".cert-card").forEach(card => {
+  card.querySelector(".view-cert").addEventListener("click", () => {
+    const imgSrc = card.dataset.img;
+    modalImg.src = imgSrc;
+    modal.classList.add("open");
+  });
+});
+
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("open");
+  modalImg.src = "";
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("open");
+    modalImg.src = "";
+  }
+});
+
+
+
 // ====== CONTACT FORM (no backend) ======
 const form = document.getElementById("contactForm");
 const note = document.getElementById("formNote");
@@ -192,3 +231,6 @@ form.addEventListener("submit", (e) => {
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+
+

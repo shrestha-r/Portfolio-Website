@@ -13,19 +13,30 @@
       <a class="logo" href="#top" aria-label="Go to top">RS</a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="burger"></span>
-        </button>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false">
+    <span class="sr-only">Open menu</span>
+    <span class="burger"></span>
+  </button>
+</nav>
 
-        <div class="nav-links" id="navLinks">
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
-          <a class="btn btn-small" href="#contact">Hire Me</a>
-        </div>
-      </nav>
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <span class="drawer-logo">RS</span>
+    <button class="drawer-close" id="drawerClose">&times;</button>
+  </div>
+
+  <div class="drawer-links">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certificates</a>
+    <a href="#contact" class="primary">Contact</a>
+  </div>
+</div>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
     </div>
   </header>
 
@@ -156,6 +167,92 @@
       </div>
     </section>
 
+    <section class="section" id="certifications">
+  <div class="container">
+    <div class="section-head">
+      <h2>Certifications & Awards</h2>
+      <p>Academic recognition and professional development certificates.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card cert-card" data-img="images/top10-certificate.jpg">
+        <h3>Top 10 Academic Performance (2025)</h3>
+        <p>
+          Awarded for achieving one of the highest marks during
+          International Year One at the University of Huddersfield.
+        </p>
+        <div class="tags">
+          <span class="tag">Academic Excellence</span>
+          <span class="tag">University of Huddersfield</span>
+        </div>
+        <button class="link primary view-cert">View Certificate</button>
+      </div>
+
+      <div class="card cert-card" data-img="images/django-certificate.jpg">
+        <h3>Django Framework Certificate</h3>
+        <p>
+          Completed hands-on training covering Django fundamentals,
+          models, views, templates, and database integration.
+        </p>
+        <div class="tags">
+          <span class="tag">Django</span>
+          <span class="tag">Python</span>
+          <span class="tag">Backend</span>
+        </div>
+        <button class="link primary view-cert">View Certificate</button>
+      </div>
+
+      <div class="card cert-card" data-img="images/web-workshop-certificate.jpg">
+        <h3>Web Development Workshop (7 Days)</h3>
+        <p>
+          Intensive workshop focused on HTML, CSS, JavaScript,
+          and full-stack web development fundamentals.
+        </p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <button class="link primary view-cert">View Certificate</button>
+      </div>
+
+      <div class="card">
+  <h3>Networking Fundamentals – Digital Badge</h3>
+  <p>
+    Verified digital credential demonstrating foundational knowledge of
+    computer networking concepts, protocols, and infrastructure.
+  </p>
+
+  <!-- Credly Embed -->
+  <div class="credly-badge">
+    <div
+      data-iframe-width="150"
+      data-iframe-height="270"
+      data-share-badge-id="bad36f17-1625-4a76-9c38-049f803aa20c"
+      data-share-badge-host="https://www.credly.com">
+    </div>
+  </div>
+
+  <div class="tags">
+    <span class="tag">Networking</span>
+    <span class="tag">IT Fundamentals</span>
+    <span class="tag">Credly Verified</span>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Certificate Modal -->
+<div class="modal" id="certModal">
+  <div class="modal-content">
+    <button class="modal-close" id="closeModal">&times;</button>
+    <img id="modalImg" alt="Certificate preview" />
+  </div>
+</div>
+
+
     <section class="section" id="experience">
       <div class="container">
         <div class="section-head">
@@ -250,5 +347,11 @@
   </main>
 
   <script src="script.js"></script>
+  <script
+  type="text/javascript"
+  async
+  src="https://cdn.credly.com/assets/utilities/embed.js">
+</script>
+
 </body>
 </html>
