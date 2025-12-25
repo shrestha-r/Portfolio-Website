@@ -13,11 +13,18 @@
       <a class="logo" href="#top" aria-label="Go to top">RS</a>
 
       <nav class="nav" aria-label="Primary navigation">
-  <button class="nav-toggle" id="navToggle" aria-expanded="false">
-    <span class="sr-only">Open menu</span>
-    <span class="burger"></span>
-  </button>
-</nav>
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#certifications">Certificates</a>
+          <a href="#contact" class="primary">Contact</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="sr-only">Open menu</span>
+          <span class="burger"></span>
+        </button>
+      </nav>
 
 <!-- Mobile Drawer -->
 <div class="mobile-drawer" id="mobileDrawer">
@@ -36,7 +43,6 @@
 </div>
 
 <div class="drawer-overlay" id="drawerOverlay"></div>
-
     </div>
   </header>
 
@@ -101,29 +107,8 @@
         </aside>
       </div>
     </section>
-
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-head">
-          <h2>Projects</h2>
-          <p>Selected work that shows full-stack, databases, and fundamentals.</p>
-        </div>
-
-        <div class="filters" role="group" aria-label="Project filters">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="fullstack">Full-Stack</button>
-          <button class="filter" data-filter="database">Database</button>
-          <button class="filter" data-filter="java">Java</button>
-          <button class="filter" data-filter="ml">ML</button>
-        </div>
-
-        <div class="grid" id="projectGrid">
-          <!-- Cards injected by JS -->
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="skills">
+    
+<section class="section" id="skills">
       <div class="container">
         <div class="section-head">
           <h2>Skills</h2>
@@ -167,6 +152,58 @@
       </div>
     </section>
 
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p>Selected work that shows full-stack, databases, and fundamentals.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Project filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="fullstack">Full-Stack</button>
+          <button class="filter" data-filter="database">Database</button>
+          <button class="filter" data-filter="java">Java</button>
+          <button class="filter" data-filter="ml">ML</button>
+        </div>
+
+        <div class="grid" id="projectGrid">
+        </div>
+      </div>
+    </section>
+
+   <section class="section" id="education">
+  <div class="container">
+    <div class="section-head">
+      <h2>Education</h2>
+      <p>Academic background and core areas of study.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>BSc Computer Science with Artificial Intelligence</h3>
+        <p><strong>University of Huddersfield, UK</strong></p>
+        <p class="muted">Expected Graduation: 2028</p>
+        <ul>
+          <li>Programming Fundamentals (Java, Python)</li>
+          <li>Database Systems and Web Development</li>
+          <li>Data Structures and Algorithms</li>
+          <li>Software Development Life Cycle (SDLC)</li>
+          <li>Computer Networks and Systems</li>
+          <li>Artificial Intelligence Fundamentals</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Higher Secondary Education (Science)</h3>
+        <p><strong>Herald International College, Kathmandu, Nepal</strong></p>
+        <p class="muted">Completed: 2024</p>
+        <p>Equivalent to UK A-Levels in Science</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
     <section class="section" id="certifications">
   <div class="container">
     <div class="section-head">
@@ -215,31 +252,6 @@
         </div>
         <button class="link primary view-cert">View Certificate</button>
       </div>
-
-      <div class="card">
-  <h3>Networking Fundamentals – Digital Badge</h3>
-  <p>
-    Verified digital credential demonstrating foundational knowledge of
-    computer networking concepts, protocols, and infrastructure.
-  </p>
-
-  <!-- Credly Embed -->
-  <div class="credly-badge">
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="bad36f17-1625-4a76-9c38-049f803aa20c"
-      data-share-badge-host="https://www.credly.com">
-    </div>
-  </div>
-
-  <div class="tags">
-    <span class="tag">Networking</span>
-    <span class="tag">IT Fundamentals</span>
-    <span class="tag">Credly Verified</span>
-  </div>
-</div>
-
     </div>
   </div>
 </section>
@@ -347,11 +359,5 @@
   </main>
 
   <script src="script.js"></script>
-  <script
-  type="text/javascript"
-  async
-  src="https://cdn.credly.com/assets/utilities/embed.js">
-</script>
-
 </body>
 </html>

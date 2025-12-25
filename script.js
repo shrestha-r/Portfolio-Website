@@ -1,9 +1,9 @@
 // ====== UPDATE THESE LINKS ======
 const LINKS = {
-  cv: "https://example.com/rahul-cv.pdf",
-  github: "https://github.com/your-username",
-  linkedin: "https://www.linkedin.com/in/your-linkedin/",
-  email: "mailto:rahul.email@example.com"
+  cv: "https://colab.research.google.com/drive/1Ub4eCtg-61_3D9JeaygXwsyL7cJ98DCk?usp=drive_link",
+  github: "https://github.com/shrestha-r/",
+  linkedin: "https://www.linkedin.com/in/rahulshrestha61/",
+  email: "mailto:rahulshrestha8102@gmail.com"
 };
 
 // ====== PROJECT DATA (edit titles + links to your real repos) ======
@@ -67,12 +67,14 @@ const overlay = document.getElementById("drawerOverlay");
 function openDrawer() {
   drawer.classList.add("open");
   overlay.classList.add("open");
+  navToggle.setAttribute("aria-expanded", "true");
   document.body.style.overflow = "hidden";
 }
 
 function closeDrawer() {
   drawer.classList.remove("open");
   overlay.classList.remove("open");
+  navToggle.setAttribute("aria-expanded", "false");
   document.body.style.overflow = "";
 }
 
@@ -84,7 +86,6 @@ overlay.addEventListener("click", closeDrawer);
 drawer.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", closeDrawer);
 });
-
 
 // ====== HERO BUTTONS / CONTACT LINKS ======
 document.getElementById("cvBtn").setAttribute("href", LINKS.cv);
@@ -174,34 +175,6 @@ animateCount(statProjects, PROJECTS.length);
 animateCount(statTech, 8);   // adjust if you want
 animateCount(statFocus, 4);  // adjust if you want
 
-// ====== Certificates section ======
-// ===== CERTIFICATE MODAL =====
-const modal = document.getElementById("certModal");
-const modalImg = document.getElementById("modalImg");
-const closeModal = document.getElementById("closeModal");
-
-document.querySelectorAll(".cert-card").forEach(card => {
-  card.querySelector(".view-cert").addEventListener("click", () => {
-    const imgSrc = card.dataset.img;
-    modalImg.src = imgSrc;
-    modal.classList.add("open");
-  });
-});
-
-closeModal.addEventListener("click", () => {
-  modal.classList.remove("open");
-  modalImg.src = "";
-});
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("open");
-    modalImg.src = "";
-  }
-});
-
-
-
 // ====== CONTACT FORM (no backend) ======
 const form = document.getElementById("contactForm");
 const note = document.getElementById("formNote");
@@ -233,4 +206,27 @@ form.addEventListener("submit", (e) => {
 document.getElementById("year").textContent = new Date().getFullYear();
 
 
+// ===== CERTIFICATE MODAL =====
+const modal = document.getElementById("certModal");
+const modalImg = document.getElementById("modalImg");
+const closeModal = document.getElementById("closeModal");
 
+document.querySelectorAll(".cert-card").forEach(card => {
+  card.querySelector(".view-cert").addEventListener("click", () => {
+    const imgSrc = card.dataset.img;
+    modalImg.src = imgSrc;
+    modal.classList.add("open");
+  });
+});
+
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("open");
+  modalImg.src = "";
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("open");
+    modalImg.src = "";
+  }
+});

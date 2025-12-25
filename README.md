@@ -74,10 +74,19 @@ portfolio/
 - Temporary agency work demonstrating professionalism
 - Placement year readiness highlighted
 
-### 5. **Education**
-- University of Huddersfield – BSc Computer Science with AI
-- Relevant coursework and modules
-- Expected graduation date
+## 5. 🎓 Education
+
+**BSc Computer Science with Artificial Intelligence**  
+University of Huddersfield, UK  
+Expected Graduation: 2028  
+
+Relevant coursework includes programming fundamentals in Java and Python, database systems and web development, data structures and algorithms, software development life cycle (SDLC), computer networks, and artificial intelligence fundamentals.
+
+**Higher Secondary Education (Science – NEB)**  
+Herald International College, Kathmandu, Nepal  
+Completed: 2024  
+Equivalent to UK A-Levels in Science.
+
 
 ### 6. **Contact Section**
 - Email contact form
