@@ -1,12 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rahul Shrestha | Portfolio</title>
-  <meta name="description" content="Rahul Shrestha — CS with AI student seeking placement. Full-stack, databases, Java/Python/SQL." />
+  <meta name="description"
+    content="Rahul Shrestha — CS with AI student seeking placement. Full-stack, databases, Java/Python/SQL." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -27,24 +31,24 @@
         </button>
       </nav>
 
-<!-- Mobile Drawer -->
-<div class="mobile-drawer" id="mobileDrawer">
-  <div class="drawer-header">
-    <span class="drawer-logo">RS</span>
-    <button class="drawer-close" id="drawerClose">&times;</button>
-  </div>
+      <!-- Mobile Drawer -->
+      <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+          <span class="drawer-logo">RS</span>
+          <button class="drawer-close" id="drawerClose">&times;</button>
+        </div>
 
-  <div class="drawer-links">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certificates</a>
-    <a href="#contact" class="primary">Contact</a>
-  </div>
-</div>
+        <div class="drawer-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#certifications">Certificates</a>
+          <a href="#contact" class="primary">Contact</a>
+        </div>
+      </div>
 
-<div class="drawer-overlay" id="drawerOverlay"></div>
+      <div class="drawer-overlay" id="drawerOverlay"></div>
     </div>
   </header>
 
@@ -53,7 +57,7 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">BSc Computer Science with AI • Placement Seeking 2025–2026</p>
-          <h1>Hi, I’m <span class="accent">Rahul</span>.<br/>I build practical software.</h1>
+          <h1>Hi, I’m <span class="accent">Rahul</span>.<br />I build practical software.</h1>
           <p class="lead">
             I focus on <strong>full-stack web apps</strong>, <strong>database design</strong>, and strong fundamentals
             in <strong>Java</strong>, <strong>Python</strong>, and <strong>SQL</strong>.
@@ -98,19 +102,25 @@
           </div>
 
           <div class="hero-card-actions">
-            <a class="btn btn-small" href="#" id="cvBtn">Download CV</a>
+            <a class="btn btn-small cv-btn" id="cvBtn" href="#">
+  👁 View CV
+</a>
+<a class="btn btn-small btn-ghost" id="cvDownload" href="#" download>
+  ⬇ Download CV
+</a>
+
             <a class="btn btn-small btn-ghost" href="#" id="githubBtn">GitHub</a>
             <a class="btn btn-small btn-ghost" href="#" id="linkedinBtn">LinkedIn</a>
           </div>
 
-          <p class="fine">
+          <!-- <p class="fine">
             Tip: Update the links inside <code>script.js</code> (CV, GitHub, LinkedIn).
-          </p>
+          </p> -->
         </aside>
       </div>
     </section>
-    
-<section class="section" id="skills">
+
+    <section class="section" id="skills">
       <div class="container">
         <div class="section-head">
           <h2>Skills</h2>
@@ -174,98 +184,143 @@
       </div>
     </section>
 
-   <section class="section" id="education">
-  <div class="container">
-    <div class="section-head">
-      <h2>Education</h2>
-      <p>Academic background and core areas of study.</p>
-    </div>
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <h2>Education</h2>
+          <p>Academic background and core areas of study.</p>
+        </div>
 
-    <div class="grid">
-      <div class="card">
-        <h3>BSc Computer Science with Artificial Intelligence</h3>
-        <p><strong>University of Huddersfield, UK</strong></p>
-        <p class="muted">Expected Graduation: 2028</p>
-        <ul>
-          <li>Programming Fundamentals (Java, Python)</li>
-          <li>Database Systems and Web Development</li>
-          <li>Data Structures and Algorithms</li>
-          <li>Software Development Life Cycle (SDLC)</li>
-          <li>Computer Networks and Systems</li>
-          <li>Artificial Intelligence Fundamentals</li>
-        </ul>
-      </div>
+        <div class="grid">
+          <div class="card">
+            <h3>BSc Computer Science with Artificial Intelligence</h3>
+            <p><strong>University of Huddersfield, UK</strong></p>
+            <p class="muted">Expected Graduation: 2028</p>
+            <ul>
+              <li>Programming Fundamentals (Java, Python)</li>
+              <li>Database Systems and Web Development</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Software Development Life Cycle (SDLC)</li>
+              <li>Computer Networks and Systems</li>
+              <li>Artificial Intelligence Fundamentals</li>
+            </ul>
+          </div>
 
-      <div class="card">
-        <h3>Higher Secondary Education (Science)</h3>
-        <p><strong>Herald International College, Kathmandu, Nepal</strong></p>
-        <p class="muted">Completed: 2024</p>
-        <p>Equivalent to UK A-Levels in Science</p>
+          <div class="card">
+            <h3>Higher Secondary Education (Science)</h3>
+            <p><strong>Herald International College, Kathmandu, Nepal</strong></p>
+            <p class="muted">Completed: 2024</p>
+            <p>Equivalent to UK A-Levels in Science</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
- 
+    </section>
+
     <section class="section" id="certifications">
-  <div class="container">
-    <div class="section-head">
-      <h2>Certifications & Awards</h2>
-      <p>Academic recognition and professional development certificates.</p>
+      <div class="container">
+        <div class="section-head">
+          <h2>Certifications & Awards</h2>
+          <p>Academic recognition and professional development certificates.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card cert-card" data-file="pdf/web_development_workshop.pdf" data-type="pdf"
+            data-title="Django Framework Certificate">
+            <h3>Top 10 Academic Performance (2025)</h3>
+            <p>
+              Awarded for achieving one of the highest marks during
+              International Year One at the University of Huddersfield.
+            </p>
+            <div class="tags">
+              <span class="tag">Academic Excellence</span>
+              <span class="tag">University of Huddersfield</span>
+            </div>
+            <button class="cert-btn view-cert">
+              📄 View Certificate
+            </button>
+
+          </div>
+          <div class="card cert-card" data-file="pdf/django_codeit_certificate.pdf" data-type="pdf"
+            data-title="Django Framework Certificate">
+            <h3>Django Framework Certificate</h3>
+            <p>
+              Completed hands-on training covering Django fundamentals,
+              models, views, templates, and database integration.
+            </p>
+            <div class="tags">
+              <span class="tag">Django</span>
+              <span class="tag">Python</span>
+              <span class="tag">Backend</span>
+            </div>
+            <button class="cert-btn view-cert">
+              📄 View Certificate
+            </button>
+          </div>
+
+          <div class="card cert-card" data-file="pdf/web_development_workshop.pdf" data-type="pdf"
+            data-title="Django Framework Certificate">
+            <h3>Web Development Workshop (7 Days)</h3>
+            <p>
+              Intensive workshop focused on HTML, CSS, JavaScript,
+              and full-stack web development fundamentals.
+            </p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <button class="cert-btn view-cert">
+              📄 View Certificate
+            </button>
+          </div>
+
+
+          <div class="card">
+            <h3>Networking Fundamentals</h3>
+            <p>
+              Verified digital credential demonstrating foundational understanding
+              of computer networking concepts, protocols, and systems.
+            </p>
+
+            <div class="credly-wrapper">
+              <div data-iframe-width="150" data-iframe-height="270"
+                data-share-badge-id="bad36f17-1625-4a76-9c38-049f803aa20c"
+                data-share-badge-host="https://www.credly.com">
+              </div>
+            </div>
+
+            <p class="credly-note">
+              Credential verified via Credly
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Certificate Viewer (PDF / Image) -->
+    <div class="cert-modal" id="certModal" aria-hidden="true">
+      <div class="cert-backdrop" id="certBackdrop"></div>
+
+      <div class="cert-viewer">
+        <div class="cert-header">
+          <span class="cert-title" id="certTitle">Certificate</span>
+          <button class="cert-close" id="closeModal">&times;</button>
+        </div>
+
+        <div class="cert-body">
+          <!-- PDF or Image injected here -->
+          <iframe id="certFrame" title="Certificate Viewer"></iframe>
+          <img id="certImage" alt="Certificate preview" />
+        </div>
+
+        <div class="cert-footer">
+          <a id="downloadCert" class="cert-download" download>
+            ⬇ Download PDF
+          </a>
+        </div>
+      </div>
     </div>
-
-    <div class="grid">
-      <div class="card cert-card" data-img="images/top10-certificate.jpg">
-        <h3>Top 10 Academic Performance (2025)</h3>
-        <p>
-          Awarded for achieving one of the highest marks during
-          International Year One at the University of Huddersfield.
-        </p>
-        <div class="tags">
-          <span class="tag">Academic Excellence</span>
-          <span class="tag">University of Huddersfield</span>
-        </div>
-        <button class="link primary view-cert">View Certificate</button>
-      </div>
-
-      <div class="card cert-card" data-img="images/django-certificate.jpg">
-        <h3>Django Framework Certificate</h3>
-        <p>
-          Completed hands-on training covering Django fundamentals,
-          models, views, templates, and database integration.
-        </p>
-        <div class="tags">
-          <span class="tag">Django</span>
-          <span class="tag">Python</span>
-          <span class="tag">Backend</span>
-        </div>
-        <button class="link primary view-cert">View Certificate</button>
-      </div>
-
-      <div class="card cert-card" data-img="images/web-workshop-certificate.jpg">
-        <h3>Web Development Workshop (7 Days)</h3>
-        <p>
-          Intensive workshop focused on HTML, CSS, JavaScript,
-          and full-stack web development fundamentals.
-        </p>
-        <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-        </div>
-        <button class="link primary view-cert">View Certificate</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Certificate Modal -->
-<div class="modal" id="certModal">
-  <div class="modal-content">
-    <button class="modal-close" id="closeModal">&times;</button>
-    <img id="modalImg" alt="Certificate preview" />
-  </div>
-</div>
-
 
     <section class="section" id="experience">
       <div class="container">
@@ -361,5 +416,7 @@
   </main>
 
   <script src="script.js"></script>
+  <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
+
 </html>

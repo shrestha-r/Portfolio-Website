@@ -206,27 +206,72 @@ form.addEventListener("submit", (e) => {
 document.getElementById("year").textContent = new Date().getFullYear();
 
 
-// ===== CERTIFICATE MODAL =====
-const modal = document.getElementById("certModal");
-const modalImg = document.getElementById("modalImg");
-const closeModal = document.getElementById("closeModal");
+/* ===== Certificate Viewer (PDF + Image) ===== */
+const certModal = document.getElementById("certModal");
+const certFrame = document.getElementById("certFrame");
+const certImage = document.getElementById("certImage");
+const certTitle = document.getElementById("certTitle");
+const downloadBtn = document.getElementById("downloadCert");
+const closeBtn = document.getElementById("closeModal");
+const backdrop = document.getElementById("certBackdrop");
 
-document.querySelectorAll(".cert-card").forEach(card => {
-  card.querySelector(".view-cert").addEventListener("click", () => {
-    const imgSrc = card.dataset.img;
-    modalImg.src = imgSrc;
-    modal.classList.add("open");
+document.querySelectorAll(".view-cert").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".cert-card");
+    const file = card.dataset.file;
+    const type = card.dataset.type;
+    const title = card.dataset.title;
+
+    certTitle.textContent = title;
+    downloadBtn.href = file;
+
+    if (type === "pdf") {
+      certFrame.src = file;
+      certFrame.style.display = "block";
+      certImage.style.display = "none";
+    } else {
+      certImage.src = file;
+      certImage.style.display = "block";
+      certFrame.style.display = "none";
+    }
+
+    certModal.classList.add("open");
+    document.body.style.overflow = "hidden";
   });
 });
 
-closeModal.addEventListener("click", () => {
-  modal.classList.remove("open");
-  modalImg.src = "";
+function closeViewer() {
+  certModal.classList.remove("open");
+  certFrame.src = "";
+  certImage.src = "";
+  document.body.style.overflow = "";
+}
+
+closeBtn.addEventListener("click", closeViewer);
+backdrop.addEventListener("click", closeViewer);
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeViewer();
 });
 
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("open");
-    modalImg.src = "";
-  }
+
+/* ===== CV Viewer (PDF) ===== */
+const cvBtn = document.getElementById("cvBtn");
+const cvDownload = document.getElementById("cvDownload");
+
+const CV_FILE = "pdf/Rahul_Shrestha_CV.pdf"; // update path
+
+cvBtn.addEventListener("click", e => {
+  e.preventDefault();
+
+  certTitle.textContent = "Curriculum Vitae";
+  certFrame.src = CV_FILE;
+  certFrame.style.display = "block";
+  certImage.style.display = "none";
+  downloadBtn.href = CV_FILE;
+
+  certModal.classList.add("open");
+  document.body.style.overflow = "hidden";
 });
+
+cvDownload.href = CV_FILE;
