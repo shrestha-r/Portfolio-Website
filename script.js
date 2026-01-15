@@ -61,7 +61,7 @@ const PROJECTS = [
     description: "MCQ practice for Pharmacy questions",
     tags: ["HTML", "CSS", "JavaScript"],
     type: ["fullstack"],
-    repo: "https://www.rahul-shrestha.com.np/madan.html",
+    repo: "madan.html",
     demo: "#top"
   }
 ];
