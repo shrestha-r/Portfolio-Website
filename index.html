@@ -103,11 +103,11 @@
 
           <div class="hero-card-actions">
             <a class="btn btn-small cv-btn" id="cvBtn" href="#">
-  👁 View CV
-</a>
-<a class="btn btn-small btn-ghost" id="cvDownload" href="#" download>
-  ⬇ Download CV
-</a>
+              👁 View CV
+            </a>
+            <a class="btn btn-small btn-ghost" id="cvDownload" href="#" download>
+              ⬇ Download CV
+            </a>
 
             <a class="btn btn-small btn-ghost" href="#" id="githubBtn">GitHub</a>
             <a class="btn btn-small btn-ghost" href="#" id="linkedinBtn">LinkedIn</a>
@@ -371,9 +371,9 @@
           <div class="contact-card">
             <h3>Quick Links</h3>
             <div class="link-list">
-              <a href="#" id="contactGithub">GitHub</a>
-              <a href="#" id="contactLinkedin">LinkedIn</a>
-              <a href="#" id="contactEmail">Email</a>
+              <a href="https://github.com/shrestha-r" id="contactGithub">GitHub</a>
+              <a href="https://www.linkedin.com/in/rahulshrestha61/" id="contactLinkedin">LinkedIn</a>
+              <a href="mailto:rahulshrestha8102@gmail.com" id="contactEmail">Email</a>
             </div>
 
             <div class="availability">
@@ -383,7 +383,8 @@
             </div>
           </div>
 
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" action="https://formspree.io/f/mbddyjzr" method="POST">
+
             <label>
               Name
               <input type="text" name="name" placeholder="Your name" required />
@@ -399,9 +400,14 @@
               <textarea name="message" rows="6" placeholder="Tell me about the role or project..." required></textarea>
             </label>
 
+            <!-- Professional extras -->
+            <input type="hidden" name="_subject" value="New Portfolio Contact">
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_next" value="https://yourusername.github.io/portfolio/thanks.html">
+
             <button class="btn" type="submit">Send Message</button>
-            <p class="fine" id="formNote"></p>
           </form>
+
         </div>
       </div>
     </section>
